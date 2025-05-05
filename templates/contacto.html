@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <img src="{{ url_for('static', filename='logo.png.png') }}" alt="Logo" style="height: 35px;">
+        <a href="/">Inicio</a>
+        <a href="/contacto">Contacto</a>
+    </nav>
+
+    <h2>Formulario de Contacto</h2>
+    <form action="/enviar" method="POST">
+        <input type="text" name="nombre" placeholder="Tu nombre" required><br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
